@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 0,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -76,7 +76,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_issues|125155000|109420000|2c6aeb7d-438c-4079-aac9-c04c97557422|00000000-0000-0000-0000-000000000000",
+          "Library missing"
+        ],
+        [
+          "lib_footprint_mismatch|134405000|101505000|3dbd82a0-5d4d-43ec-af54-ee2f1270a4bd|00000000-0000-0000-0000-000000000000",
+          "SMD Cable hack"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -120,9 +129,9 @@
         "padstack": "warning",
         "pth_inside_courtyard": "error",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
